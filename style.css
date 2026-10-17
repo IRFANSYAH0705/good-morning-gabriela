@@ -4,10 +4,7 @@
 
 :root {
     --ink: #67445c;
-    --muted: #a67b96;
     --pink: #df5597;
-    --pink-dark: #c74687;
-    --line: #f0d7e5;
 }
 
 html {
@@ -37,6 +34,8 @@ button {
     min-height: 100dvh;
     box-shadow: 0 10px 50px #9e557412;
 }
+
+/* HEADER */
 
 .topbar {
     height: 52px;
@@ -72,12 +71,15 @@ button {
     font-size: 15px;
 }
 
+/* HALAMAN UTAMA */
+
 .hero {
     position: relative;
     isolation: isolate;
     overflow: hidden;
     text-align: center;
     padding: 38px 18px 29px;
+
     background: linear-gradient(
         145deg,
         #fff9fc,
@@ -114,6 +116,8 @@ h1 span:first-child {
     color: #9b718b;
     margin: 13px auto 24px;
 }
+
+/* HIASAN MELAYANG */
 
 .floating {
     position: absolute;
@@ -154,7 +158,7 @@ h1 span:first-child {
     animation-delay: 1.5s;
 }
 
-/* KARTU TAMAN ANIME */
+/* KARTU TAMAN */
 
 .scene-card {
     width: min(100%, 800px);
@@ -197,8 +201,6 @@ h1 span:first-child {
     overflow: hidden;
 }
 
-/* KETERANGAN TAMAN */
-
 .scene-caption {
     display: flex;
     justify-content: center;
@@ -231,24 +233,30 @@ h1 span:first-child {
     justify-content: center;
     align-items: center;
     gap: 10px;
+
     min-height: 48px;
     max-width: 100%;
     padding: 13px 23px;
+
     border: 0;
     border-radius: 999px;
+
     font: 600 13px Arial, sans-serif;
     cursor: pointer;
     touch-action: manipulation;
+
     transition: transform .2s, box-shadow .2s;
 }
 
 .primary {
     color: white;
+
     background: linear-gradient(
         110deg,
         #e45b99,
         #b775cf
     );
+
     box-shadow: 0 7px 18px #c95b982b;
 }
 
@@ -272,14 +280,16 @@ h1 span:first-child {
     letter-spacing: .3px;
 }
 
-/* SURAT */
+/* SURAT DAN KEJUTAN */
 
 .letter-panel,
 .ending-panel {
     margin: 18px 14px 22px;
     padding: 22px;
+
     border: 1px solid #f0d7e5;
     border-radius: 18px;
+
     background: #fffdf9;
     box-shadow: 0 10px 30px #a8557b0c;
 }
@@ -297,13 +307,16 @@ h1 span:first-child {
     max-width: 650px;
     margin: auto;
     padding: 24px clamp(16px, 4vw, 35px);
+
     border: 1px solid #f4e1d9;
     border-radius: 12px;
+
     background: linear-gradient(
         180deg,
         #fffefb,
         #fffaf5
     );
+
     text-align: left;
 }
 
@@ -317,9 +330,9 @@ h1 span:first-child {
 
 .paper p {
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 1.85;
     color: #76576b;
-    margin: 0 0 14px;
+    margin: 0 0 12px;
 }
 
 .paper .greeting {
@@ -333,7 +346,7 @@ h1 span:first-child {
     text-align: center;
     color: #b34d87;
     font-weight: bold;
-    margin: 20px 0 0;
+    margin: 16px 0 0;
 }
 
 .signoff span {
@@ -346,15 +359,16 @@ h1 span:first-child {
     width: 100%;
     white-space: normal;
     line-height: 1.4;
-    margin: 20px auto 0;
+    margin: 18px auto 0;
 }
 
-/* KEJUTAN TERAKHIR */
+/* ADEGAN PELUKAN */
 
 .ending-panel {
     text-align: center;
     position: relative;
     overflow: hidden;
+
     background: linear-gradient(
         145deg,
         #ffe8f1,
@@ -362,54 +376,92 @@ h1 span:first-child {
     );
 }
 
-.ending-friends {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    font-size: 38px;
-    animation: floaty 3s ease-in-out infinite;
-}
-
-.big-heart {
-    font-size: 33px;
-}
-
 .ending-kicker {
     font: 9px Arial, sans-serif;
     letter-spacing: 2.4px;
     color: #b3759b;
-    margin: 15px 0 9px;
+    margin: 0 0 12px;
 }
 
-.ending-panel h2 {
-    font-size: clamp(31px, 7vw, 49px);
-    line-height: 1.17;
+.hug-scene {
+    display: block;
+    width: min(100%, 430px);
+    height: auto;
+    margin: 0 auto;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+/* GERAKAN KARAKTER */
+
+.hug-girl,
+.hug-boy {
+    transform-box: fill-box;
+    transform-origin: 50% 90%;
+}
+
+.hug-girl {
+    animation: girlApproach 3.8s cubic-bezier(.22,.75,.25,1) both;
+}
+
+.hug-boy {
+    animation: boyApproach 3.8s cubic-bezier(.22,.75,.25,1) both;
+}
+
+.girl-arm,
+.boy-arm {
+    transform-box: fill-box;
+    transform-origin: 50% 10%;
+    stroke-linecap: round;
+}
+
+.girl-arm {
+    animation: girlHugArms 3.8s ease-in-out both;
+}
+
+.boy-arm {
+    animation: boyHugArms 3.8s ease-in-out both;
+}
+
+.hug-heart {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: heartPop 2s ease-in-out 2.4s infinite;
+    opacity: 0;
+}
+
+.hug-sparkles {
+    animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.ending-title {
+    font-size: clamp(23px, 5vw, 36px);
+    line-height: 1.2;
     color: #d6448c;
-    margin: 0;
-    overflow-wrap: anywhere;
-    animation: heartbeat 1.8s infinite;
+    margin: 20px 0 8px;
+    animation: heartbeat 2s ease-in-out infinite;
 }
 
-.ending-panel h2 span {
-    letter-spacing: 1.5px;
+.ending-title span {
+    display: inline-block;
+    animation: heartBeat 1.2s ease-in-out infinite;
 }
 
 .ending-message {
     font: 12px/1.7 Arial, sans-serif;
     color: #9d6b8e;
-    margin: 13px auto;
+    margin: 10px auto 14px;
 }
 
 .heart-rain {
-    height: 45px;
+    height: 35px;
     position: relative;
     overflow: hidden;
 }
 
 .rain-heart {
     position: absolute;
-    bottom: -28px;
+    bottom: -25px;
     animation: rise 3.4s linear forwards;
 }
 
@@ -420,11 +472,13 @@ h1 span:first-child {
     box-shadow: 0 3px 10px #c95b9810;
 }
 
-/* FOOTER */
+/* MENYEMBUNYIKAN BAGIAN */
 
 .hidden {
     display: none !important;
 }
+
+/* FOOTER */
 
 .footer {
     display: flex;
@@ -441,101 +495,71 @@ h1 span:first-child {
     color: #e16ba5;
 }
 
-/* ANIMASI POHON DAN KARAKTER */
+/* ANIMASI TAMAN */
 
 .storybook .tree-sway {
     transform-box: fill-box;
     transform-origin: 50% 100%;
-    animation:
-        treeGrow 1.8s cubic-bezier(.2, .8, .2, 1) .25s both,
-        treeSway 5s ease-in-out 2.1s infinite;
+    animation: treeSway 6s ease-in-out infinite;
 }
 
 .storybook .tree-crown {
     transform-box: fill-box;
-    transform-origin: 50% 70%;
-    animation: crownSway 4.2s ease-in-out 1.8s infinite;
+    transform-origin: 50% 85%;
+    animation: crownSway 5s ease-in-out infinite;
 }
 
 .storybook .tree-hearts {
     transform-box: fill-box;
     transform-origin: 50% 50%;
-    animation: heartTwinkle 2.4s ease-in-out 2s infinite;
+    animation: heartTwinkle 3s ease-in-out infinite;
 }
 
 .storybook .cloud-one {
-    animation: cloudDrift 14s ease-in-out infinite alternate;
+    animation: cloudDrift 16s ease-in-out infinite alternate;
 }
 
 .storybook .cloud-two {
-    animation: cloudDrift 17s ease-in-out infinite alternate-reverse;
+    animation: cloudDrift 19s ease-in-out infinite alternate-reverse;
 }
 
 .storybook .girl-character {
     transform-box: fill-box;
     transform-origin: 50% 100%;
-    animation: characterSway 3.5s ease-in-out infinite;
+    animation: characterSway 4.5s ease-in-out infinite;
 }
 
 .storybook .boy-character {
     transform-box: fill-box;
     transform-origin: 50% 100%;
-    animation: characterSway 4s ease-in-out infinite reverse;
+    animation: characterSway 4.8s ease-in-out infinite reverse;
 }
 
 .storybook .bear-character {
     transform-box: fill-box;
     transform-origin: 50% 100%;
-    animation: petBounce 2.8s ease-in-out infinite;
+    animation: petBounce 3.6s ease-in-out infinite;
 }
 
 .storybook .panda-character {
     transform-box: fill-box;
     transform-origin: 50% 100%;
-    animation: petBounce 3.2s ease-in-out infinite .4s;
+    animation: petBounce 4s ease-in-out infinite .5s;
 }
 
 .storybook .petal-one {
-    animation: petalFloat 6s linear infinite;
+    animation: petalFloat 7s linear infinite;
 }
 
 .storybook .petal-two {
-    animation: petalFloat 7s linear infinite -2s;
+    animation: petalFloat 8s linear infinite -2s;
 }
 
 .storybook .petal-three {
-    animation: petalFloat 5.5s linear infinite -1s;
+    animation: petalFloat 6.5s linear infinite -1s;
 }
 
 /* KEYFRAMES */
-
-@keyframes treeGrow {
-    0% {
-        transform: scaleY(.03);
-        opacity: 0;
-    }
-
-    70% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-}
-
-@keyframes heartTwinkle {
-    0%, 100% {
-        opacity: .72;
-        transform: scale(.96);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.06);
-    }
-}
 
 @keyframes floaty {
     0%, 100% {
@@ -553,7 +577,7 @@ h1 span:first-child {
     }
 
     50% {
-        transform: rotate(1.5deg);
+        transform: rotate(1.2deg);
     }
 }
 
@@ -564,6 +588,18 @@ h1 span:first-child {
 
     50% {
         transform: rotate(1.5deg) translateY(-2px);
+    }
+}
+
+@keyframes heartTwinkle {
+    0%, 100% {
+        opacity: .72;
+        transform: scale(.97);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.04);
     }
 }
 
@@ -579,25 +615,21 @@ h1 span:first-child {
 
 @keyframes characterSway {
     0%, 100% {
-        transform: translateY(0) rotate(-.5deg);
+        transform: translateY(0) rotate(-.35deg);
     }
 
     50% {
-        transform: translateY(-3px) rotate(.8deg);
+        transform: translateY(-2px) rotate(.5deg);
     }
 }
 
 @keyframes petBounce {
     0%, 100% {
-        transform: translateY(0) rotate(0);
+        transform: translateY(0);
     }
 
-    45% {
-        transform: translateY(-5px) rotate(-2deg);
-    }
-
-    65% {
-        transform: translateY(0) rotate(2deg);
+    50% {
+        transform: translateY(-3px);
     }
 }
 
@@ -619,7 +651,7 @@ h1 span:first-child {
 
 @keyframes rise {
     to {
-        transform: translateY(-100px) rotate(25deg);
+        transform: translateY(-80px) rotate(25deg);
         opacity: 0;
     }
 }
@@ -630,11 +662,116 @@ h1 span:first-child {
     }
 
     15% {
-        transform: scale(1.025);
+        transform: scale(1.018);
     }
 
     30% {
         transform: scale(1);
+    }
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* KARAKTER MENDEKAT */
+
+@keyframes girlApproach {
+    0% {
+        transform: translateX(-17px) translateY(0) rotate(-2deg);
+    }
+
+    42% {
+        transform: translateX(3px) translateY(-2px) rotate(1deg);
+    }
+
+    58% {
+        transform: translateX(7px) translateY(0) rotate(0);
+    }
+
+    72%, 100% {
+        transform: translateX(8px) translateY(1px) rotate(1deg);
+    }
+}
+
+@keyframes boyApproach {
+    0% {
+        transform: translateX(17px) translateY(0) rotate(2deg);
+    }
+
+    42% {
+        transform: translateX(-3px) translateY(-2px) rotate(-1deg);
+    }
+
+    58% {
+        transform: translateX(-7px) translateY(0) rotate(0);
+    }
+
+    72%, 100% {
+        transform: translateX(-8px) translateY(1px) rotate(-1deg);
+    }
+}
+
+/* GERAKAN TANGAN MEMELUK */
+
+@keyframes girlHugArms {
+    0%, 35% {
+        transform: rotate(-8deg) translateY(0);
+    }
+
+    58% {
+        transform: rotate(8deg) translateY(-2px);
+    }
+
+    76%, 100% {
+        transform: rotate(18deg) translateY(-1px);
+    }
+}
+
+@keyframes boyHugArms {
+    0%, 35% {
+        transform: rotate(8deg) translateY(0);
+    }
+
+    58% {
+        transform: rotate(-8deg) translateY(-2px);
+    }
+
+    76%, 100% {
+        transform: rotate(-18deg) translateY(-1px);
+    }
+}
+
+@keyframes heartPop {
+    0%, 20% {
+        opacity: 0;
+        transform: translateY(8px) scale(.4);
+    }
+
+    45% {
+        opacity: 1;
+        transform: translateY(-4px) scale(1.1);
+    }
+
+    70%, 100% {
+        opacity: .85;
+        transform: translateY(-10px) scale(1);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: .65;
+    }
+
+    50% {
+        opacity: 1;
     }
 }
 
@@ -702,20 +839,19 @@ h1 span:first-child {
 
     .paper p {
         font-size: 13px;
-        line-height: 1.85;
+        line-height: 1.8;
     }
 
     .paper .greeting {
         font-size: 16px;
     }
 
-    .ending-friends {
-        font-size: 32px;
-        gap: 10px;
+    .hug-scene {
+        width: 100%;
     }
 }
 
-/* PENGATURAN ANIMASI UNTUK PENGGUNA YANG MEMATIKAN MOTION */
+/* PENGATURAN ANIMASI */
 
 @media (prefers-reduced-motion: reduce) {
 
