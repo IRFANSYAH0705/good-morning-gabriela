@@ -2,92 +2,852 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#fff0f6">
-    <title>Good Morning, Gabriela 💗</title>
+    <meta name="description" content="Hadiah selamat pagi khusus untuk Gabriela.">
+
+    <title>Good Morning, Gabriela ♡</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="container">
+<main class="site">
 
-        <header class="header">
-            <span>♡</span>
-            <p>A Little Gift for Gabriela</p>
-            <span>♡</span>
-        </header>
+    <header class="topbar">
+        <a class="brand" href="#">
+            <span class="brand-heart">♥</span>
+            little love letter
+        </a>
 
-        <section class="hero">
+        <span class="to-label">
+            made for Gabriela <span>✿</span>
+        </span>
+    </header>
 
-            <p class="subtitle">A LITTLE MORNING SURPRISE</p>
+    <section class="hero">
 
-            <h1>
-                Good Morning,<br>
-                <span>Gabriela 🌷</span>
-            </h1>
+        <div class="floating flower flower-a">✿</div>
+        <div class="floating flower flower-b">✿</div>
+        <div class="floating twinkle twinkle-a">✧</div>
+        <div class="floating twinkle twinkle-b">✦</div>
 
-            <p class="description">
-                Ada hadiah kecil yang dibuat khusus untukmu.
-            </p>
+        <p class="eyebrow">A TINY SURPRISE FOR YOUR MORNING</p>
 
-            <div class="characters">
+        <h1>
+            Selamat Pagi,<br>
+            <span>Gabriela</span>
+            <span class="title-flower">🌷</span>
+        </h1>
 
-                <div class="anime anime-girl">
-                    <div class="hair"></div>
-                    <div class="face">
-                        <span class="eye left"></span>
-                        <span class="eye right"></span>
-                        <span class="blush left"></span>
-                        <span class="blush right"></span>
-                        <span class="mouth"></span>
-                    </div>
-                    <div class="body girl-body">♡</div>
-                    <small>Gabriela 🌸</small>
-                </div>
+        <p class="intro">
+            Semoga pagi ini membawa banyak hal baik untukmu.
+        </p>
 
-                <div class="animals">
-                    <div class="animal">🧸</div>
-                    <div class="animal panda">🐼</div>
-                </div>
+        <!-- TAMAN ANIME -->
 
-                <div class="anime anime-boy">
-                    <div class="hair"></div>
-                    <div class="face">
-                        <span class="eye left"></span>
-                        <span class="eye right"></span>
-                        <span class="blush left"></span>
-                        <span class="blush right"></span>
-                        <span class="mouth"></span>
-                    </div>
-                    <div class="body boy-body">♥</div>
-                    <small>Someone Special ✨</small>
-                </div>
+        <div class="scene-card">
 
+            <div class="scene-label">
+                <span class="live-dot"></span>
+                A LITTLE ANIME GARDEN
             </div>
 
-            <div class="tree-area">
-                <div class="tree">
-                    <div class="trunk"></div>
-                    <div class="branch branch-left"></div>
-                    <div class="branch branch-right"></div>
-                    <div class="leaves" id="leaves"></div>
-                </div>
-                <div class="ground"></div>
+            <svg
+                class="storybook"
+                viewBox="0 0 760 440"
+                role="img"
+                aria-labelledby="sceneTitle sceneDesc"
+            >
+
+                <title id="sceneTitle">
+                    Taman anime untuk Gabriela
+                </title>
+
+                <desc id="sceneDesc">
+                    Karakter anime laki-laki dan perempuan
+                    bersama beruang, panda, dan pohon cinta
+                    yang bergerak lembut.
+                </desc>
+
+                <defs>
+
+                    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#ffeaf4"/>
+                        <stop offset="100%" stop-color="#f4eaff"/>
+                    </linearGradient>
+
+                    <linearGradient id="treeWood" x1="0" x2="1">
+                        <stop offset="0%" stop-color="#8b5b4e"/>
+                        <stop offset="50%" stop-color="#c58a6e"/>
+                        <stop offset="100%" stop-color="#8b5b4e"/>
+                    </linearGradient>
+
+                    <linearGradient id="pinkDress" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#ffb7d4"/>
+                        <stop offset="100%" stop-color="#e96da8"/>
+                    </linearGradient>
+
+                    <linearGradient id="blueJacket" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#b7c4ff"/>
+                        <stop offset="100%" stop-color="#7c8fd6"/>
+                    </linearGradient>
+
+                    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="180%">
+                        <feDropShadow
+                            dx="0"
+                            dy="5"
+                            stdDeviation="5"
+                            flood-color="#b86f9b"
+                            flood-opacity=".16"
+                        />
+                    </filter>
+
+                </defs>
+
+                <!-- LANGIT -->
+
+                <rect
+                    width="760"
+                    height="440"
+                    rx="24"
+                    fill="url(#sky)"
+                />
+
+                <!-- MATAHARI -->
+
+                <circle
+                    cx="90"
+                    cy="70"
+                    r="34"
+                    fill="#fff9dc"
+                    opacity=".9"
+                />
+
+                <!-- AWAN BERGERAK -->
+
+                <g class="cloud cloud-one" fill="#fff" opacity=".8">
+                    <ellipse cx="205" cy="72" rx="37" ry="13"/>
+                    <circle cx="188" cy="63" r="17"/>
+                    <circle cx="211" cy="58" r="21"/>
+                    <circle cx="232" cy="69" r="14"/>
+                </g>
+
+                <g class="cloud cloud-two" fill="#fff" opacity=".75">
+                    <ellipse cx="575" cy="91" rx="42" ry="14"/>
+                    <circle cx="555" cy="81" r="18"/>
+                    <circle cx="580" cy="76" r="22"/>
+                    <circle cx="602" cy="88" r="14"/>
+                </g>
+
+                <!-- BINTANG -->
+
+                <g fill="#e8a5c9" opacity=".75">
+                    <path d="M54 133 l5 10 11 2 -8 8 2 11 -10 -5 -10 5 2 -11 -8 -8 11 -2z"/>
+                    <path d="M684 142 l4 8 9 1 -7 6 2 9 -8 -4 -8 4 2 -9 -7 -6 9 -1z"/>
+                    <path d="M375 45 l3 7 8 1 -6 5 1 8 -6 -4 -7 4 2 -8 -6 -5 8 -1z"/>
+                </g>
+
+                <!-- RUMPUT -->
+
+                <path
+                    d="M0 325 Q130 292 248 328 T500 320 T760 315 V440 H0Z"
+                    fill="#d6edce"
+                />
+
+                <path
+                    d="M0 360 Q150 333 300 361 T580 352 T760 360 V440 H0Z"
+                    fill="#c1e2ba"
+                />
+
+                <!-- BUNGA DI TAMAN -->
+
+                <g fill="#f3a7cc">
+
+                    <circle cx="63" cy="344" r="5"/>
+                    <circle cx="72" cy="340" r="5"/>
+                    <circle cx="69" cy="350" r="5"/>
+                    <circle cx="60" cy="350" r="5"/>
+                    <circle cx="66" cy="346" r="4" fill="#ffdf83"/>
+
+                    <circle cx="705" cy="336" r="5"/>
+                    <circle cx="714" cy="332" r="5"/>
+                    <circle cx="711" cy="342" r="5"/>
+                    <circle cx="702" cy="342" r="5"/>
+                    <circle cx="708" cy="338" r="4" fill="#ffdf83"/>
+
+                </g>
+
+                <!-- POHON CINTA -->
+
+                <g class="tree-sway" filter="url(#softShadow)">
+
+                    <!-- BATANG -->
+
+                    <path
+                        d="M376 366
+                           C376 322 370 289 383 249
+                           C389 228 390 210 383 194"
+                        fill="none"
+                        stroke="url(#treeWood)"
+                        stroke-width="24"
+                        stroke-linecap="round"
+                    />
+
+                    <!-- CABANG KIRI -->
+
+                    <path
+                        d="M379 291 C352 269 339 250 332 225"
+                        fill="none"
+                        stroke="#a96e59"
+                        stroke-width="11"
+                        stroke-linecap="round"
+                    />
+
+                    <!-- CABANG KANAN -->
+
+                    <path
+                        d="M383 265 C414 248 428 224 435 204"
+                        fill="none"
+                        stroke="#a96e59"
+                        stroke-width="11"
+                        stroke-linecap="round"
+                    />
+
+                    <!-- CABANG ATAS -->
+
+                    <path
+                        d="M383 229 C366 207 359 188 363 171"
+                        fill="none"
+                        stroke="#a96e59"
+                        stroke-width="8"
+                        stroke-linecap="round"
+                    />
+
+                    <!-- DAUN BERBENTUK HATI -->
+
+                    <g class="tree-crown">
+
+                        <circle cx="333" cy="193" r="47" fill="#f7a9d0"/>
+                        <circle cx="374" cy="165" r="48" fill="#ef91c1"/>
+                        <circle cx="416" cy="191" r="48" fill="#f7b6d6"/>
+                        <circle cx="350" cy="224" r="43" fill="#f9c1dc"/>
+                        <circle cx="408" cy="226" r="43" fill="#f3a0cc"/>
+                        <circle cx="379" cy="202" r="49" fill="#f4a7ce"/>
+
+                    </g>
+
+                    <!-- HIASAN HATI -->
+
+                    <g class="tree-hearts" fill="#fff4fa">
+
+                        <path d="M345 177 C337 166 322 175 345 194 C368 175 353 166 345 177Z"/>
+
+                        <path d="M407 198 C400 188 386 196 407 214 C428 196 414 188 407 198Z"/>
+
+                        <path d="M375 144 C369 136 358 143 375 158 C392 143 381 136 375 144Z"/>
+
+                        <path d="M355 226 C349 218 338 225 355 240 C372 225 361 218 355 226Z"/>
+
+                        <path d="M416 235 C410 227 399 234 416 249 C433 234 422 227 416 235Z"/>
+
+                    </g>
+
+                </g>
+
+                <!-- KELOPAK BUNGA -->
+
+                <g class="petal petal-one" fill="#f06fae">
+                    <ellipse cx="287" cy="235" rx="5" ry="9"/>
+                </g>
+
+                <g class="petal petal-two" fill="#f6a5ce">
+                    <ellipse cx="458" cy="269" rx="5" ry="8"/>
+                </g>
+
+                <g class="petal petal-three" fill="#f06fae">
+                    <ellipse cx="306" cy="286" rx="4" ry="7"/>
+                </g>
+
+                <!-- KARAKTER ANIME PEREMPUAN FULL BODY -->
+
+                <g
+                    class="girl-character"
+                    filter="url(#softShadow)"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <!-- KAKI -->
+
+                    <path
+                        d="M177 323 L174 359 Q174 368 185 368 Q193 368 193 359 L199 323Z"
+                        fill="#f6c6b7"
+                        stroke="#c98d8a"
+                        stroke-width="2"
+                    />
+
+                    <path
+                        d="M207 323 L210 359 Q210 368 221 368 Q229 368 226 358 L226 322Z"
+                        fill="#f6c6b7"
+                        stroke="#c98d8a"
+                        stroke-width="2"
+                    />
+
+                    <!-- SEPATU -->
+
+                    <path
+                        d="M169 364 Q183 357 196 365 Q199 376 184 379 L164 376Z"
+                        fill="#e86c9f"
+                    />
+
+                    <path
+                        d="M207 365 Q220 357 230 366 L235 375 Q221 382 207 376Z"
+                        fill="#e86c9f"
+                    />
+
+                    <!-- TANGAN -->
+
+                    <path
+                        d="M170 247 Q149 259 153 286 L164 302 Q170 307 175 300 L170 284 L188 268Z"
+                        fill="#f7cbbd"
+                        stroke="#d99d9b"
+                        stroke-width="2"
+                    />
+
+                    <path
+                        d="M226 247 Q245 256 244 274 L236 293 Q231 300 225 294 L229 278 L211 267Z"
+                        fill="#f7cbbd"
+                        stroke="#d99d9b"
+                        stroke-width="2"
+                    />
+
+                    <!-- GAUN PINK -->
+
+                    <path
+                        d="M178 232 Q197 221 218 232 L229 286 Q201 303 168 286Z"
+                        fill="url(#pinkDress)"
+                        stroke="#d65f96"
+                        stroke-width="2"
+                    />
+
+                    <path
+                        d="M181 238 Q199 249 216 238"
+                        fill="none"
+                        stroke="#fff0f7"
+                        stroke-width="3"
+                    />
+
+                    <path
+                        d="M173 282 Q199 291 226 282"
+                        fill="none"
+                        stroke="#ffd9e9"
+                        stroke-width="3"
+                    />
+
+                    <path
+                        d="M193 255 Q199 247 205 255 Q205 263 199 267 Q193 263 193 255Z"
+                        fill="#fff5fa"
+                    />
+
+                    <!-- LEHER -->
+
+                    <path
+                        d="M190 218 L190 235 Q199 242 207 234 L207 218Z"
+                        fill="#f6c6b7"
+                        stroke="#d99d9b"
+                        stroke-width="2"
+                    />
+
+                    <!-- RAMBUT BELAKANG -->
+
+                    <path
+                        d="M174 167 Q161 191 170 222 L180 237 L190 213 L218 232 Q238 205 226 175Z"
+                        fill="#4a3049"
+                        stroke="#35263c"
+                        stroke-width="3"
+                    />
+
+                    <!-- WAJAH -->
+
+                    <ellipse
+                        cx="199"
+                        cy="188"
+                        rx="31"
+                        ry="37"
+                        fill="#ffdfd2"
+                        stroke="#d99d9b"
+                        stroke-width="2"
+                    />
+
+                    <!-- RAMBUT DEPAN -->
+
+                    <path
+                        d="M168 184 Q162 154 188 150 Q218 144 231 169 L225 188 Q214 178 210 166 Q200 184 187 177 Q181 188 168 184Z"
+                        fill="#52344d"
+                        stroke="#35263c"
+                        stroke-width="3"
+                    />
+
+                    <!-- MATA -->
+
+                    <ellipse cx="187" cy="192" rx="5.2" ry="8" fill="#57324f"/>
+                    <ellipse cx="211" cy="192" rx="5.2" ry="8" fill="#57324f"/>
+
+                    <ellipse cx="188" cy="190" rx="1.8" ry="3" fill="#fff"/>
+                    <ellipse cx="212" cy="190" rx="1.8" ry="3" fill="#fff"/>
+
+                    <!-- ALIS -->
+
+                    <path
+                        d="M181 183 Q187 179 193 183 M205 183 Q211 179 217 183"
+                        fill="none"
+                        stroke="#52344d"
+                        stroke-width="2.5"
+                    />
+
+                    <!-- PIPI -->
+
+                    <ellipse cx="179" cy="203" rx="5" ry="2.5" fill="#f39ab3"/>
+                    <ellipse cx="219" cy="203" rx="5" ry="2.5" fill="#f39ab3"/>
+
+                    <!-- SENYUM -->
+
+                    <path
+                        d="M194 207 Q199 212 204 207"
+                        fill="none"
+                        stroke="#b75d7c"
+                        stroke-width="2"
+                    />
+
+                    <!-- PITA RAMBUT -->
+
+                    <path
+                        d="M221 158 Q236 144 240 158 Q237 170 223 166Z"
+                        fill="#f06fae"
+                        stroke="#d65f96"
+                        stroke-width="2"
+                    />
+
+                    <path
+                        d="M222 160 Q208 145 205 157 Q209 168 222 164Z"
+                        fill="#ffbdd8"
+                        stroke="#d65f96"
+                        stroke-width="2"
+                    />
+
+                    <circle cx="222" cy="162" r="4" fill="#ffe8f2"/>
+
+                </g>
+
+                <!-- KARAKTER ANIME LAKI-LAKI FULL BODY -->
+
+                <g
+                    class="boy-character"
+                    filter="url(#softShadow)"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+
+                    <!-- KAKI -->
+
+                    <path
+                        d="M540 309 L536 358 Q536 366 546 366 Q555 366 555 358 L562 309Z"
+                        fill="#f4c8b9"
+                        stroke="#c98d8a"
+                        stroke-width="2"
+                    />
+
+                    <path
+                        d="M568 309 L574 357 Q575 366 585 365 Q594 363 590 354 L585 307Z"
+                        fill="#f4c8b9"
+                        stroke="#c98d8a"
+                        stroke-width="2"
+                    />
+
+                    <!-- SEPATU -->
+
+                    <path
+                        d="M532 361 Q546 356 558 363 L559 372 Q545 378 531 371Z"
+                        fill="#6875b8"
+                    />
+
+                    <path
+                        d="M572 362 Q585 356 593 363 L598 371 Q585 378 573 372Z"
+                        fill="#6875b8"
+                    />
+
+                    <!-- TANGAN -->
+
+                    <path
+                        d="M537 234 Q519 248 524 271 L532 294 Q537 300 543 294 L539 272 L553 255Z"
+                        fill="#f4c8b9"
+                        stroke="#c98d8a"
+                        stroke-width="2"
+                    />
+
+                    <path
+                        d="M584 235 Q604 246 602 265 L594 286 Q590 292 585 286 L588 267 L570 254Z"
+                        fill="#f4c8b9"
+                        stroke="#c98d8a"
+                        stroke-width="2"
+                    />
+
+                    <!-- JAKET BIRU -->
+
+                    <path
+                        d="M542 224 Q560 216 578 225 L591 282 Q562 296 529 282Z"
+                        fill="url(#blueJacket)"
+                        stroke="#687bbf"
+                        stroke-width="2"
+                    />
+
+                    <!-- KAOS -->
+
+                    <path
+                        d="M552 225 L562 247 L572 225 L569 282 L556 282Z"
+                        fill="#fff4fa"
+                        stroke="#d9d5ed"
+                        stroke-width="1.5"
+                    />
+
+                    <!-- LEHER -->
+
+                    <path
+                        d="M552 209 L552 228 Q561 236 570 228 L570 209Z"
+                        fill="#f4c8b9"
+                        stroke="#c98d8a"
+                        stroke-width="2"
+                    />
+
+                    <!-- RAMBUT BELAKANG -->
+
+                    <path
+                        d="M535 165 Q522 187 531 216 L544 230 L552 213 L579 226 Q596 199 584 171Z"
+                        fill="#30334c"
+                        stroke="#25283c"
+                        stroke-width="3"
+                    />
+
+                    <!-- WAJAH -->
+
+                    <ellipse
+                        cx="562"
+                        cy="184"
+                        rx="30"
+                        ry="36"
+                        fill="#ffdfd2"
+                        stroke="#c98d8a"
+                        stroke-width="2"
+                    />
+
+                    <!-- RAMBUT DEPAN -->
+
+                    <path
+                        d="M532 180 Q525 153 551 148 Q580 143 591 165 L584 185 Q570 176 568 163 Q555 180 544 173 L532 187Z"
+                        fill="#37354f"
+                        stroke="#25283c"
+                        stroke-width="3"
+                    />
+
+                    <!-- MATA -->
+
+                    <ellipse cx="551" cy="188" rx="4.8" ry="7.5" fill="#3c4269"/>
+                    <ellipse cx="574" cy="188" rx="4.8" ry="7.5" fill="#3c4269"/>
+
+                    <ellipse cx="552" cy="186" rx="1.7" ry="2.8" fill="#fff"/>
+                    <ellipse cx="575" cy="186" rx="1.7" ry="2.8" fill="#fff"/>
+
+                    <!-- ALIS -->
+
+                    <path
+                        d="M545 180 Q551 176 557 180 M568 180 Q574 176 580 180"
+                        fill="none"
+                        stroke="#37354f"
+                        stroke-width="2.5"
+                    />
+
+                    <!-- PIPI -->
+
+                    <ellipse cx="544" cy="199" rx="4.5" ry="2" fill="#f39ab3"/>
+                    <ellipse cx="581" cy="199" rx="4.5" ry="2" fill="#f39ab3"/>
+
+                    <!-- SENYUM -->
+
+                    <path
+                        d="M557 204 Q562 208 567 204"
+                        fill="none"
+                        stroke="#b75d7c"
+                        stroke-width="2"
+                    />
+
+                </g>
+
+                <!-- BERUANG FULL BODY -->
+
+                <g
+                    class="bear-character"
+                    stroke="#9e6b59"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                >
+
+                    <!-- TELINGA -->
+
+                    <circle cx="291" cy="317" r="16" fill="#b98065"/>
+                    <circle cx="322" cy="317" r="16" fill="#b98065"/>
+
+                    <!-- BADAN -->
+
+                    <ellipse cx="307" cy="340" rx="28" ry="31" fill="#c99073"/>
+
+                    <ellipse
+                        cx="307"
+                        cy="344"
+                        rx="15"
+                        ry="19"
+                        fill="#f5d9b9"
+                        stroke="none"
+                    />
+
+                    <!-- KEPALA -->
+
+                    <circle cx="307" cy="309" r="26" fill="#c99073"/>
+
+                    <ellipse
+                        cx="307"
+                        cy="318"
+                        rx="16"
+                        ry="12"
+                        fill="#f5d9b9"
+                        stroke="none"
+                    />
+
+                    <!-- MATA -->
+
+                    <circle cx="298" cy="307" r="3.5" fill="#50374a" stroke="none"/>
+                    <circle cx="316" cy="307" r="3.5" fill="#50374a" stroke="none"/>
+
+                    <!-- HIDUNG -->
+
+                    <ellipse cx="307" cy="315" rx="5" ry="3.5" fill="#50374a" stroke="none"/>
+
+                    <!-- MULUT -->
+
+                    <path
+                        d="M303 320 Q307 324 311 320"
+                        fill="none"
+                        stroke="#9e6b59"
+                        stroke-width="1.5"
+                    />
+
+                    <!-- TANGAN -->
+
+                    <ellipse cx="286" cy="345" rx="8" ry="13" fill="#c99073"/>
+                    <ellipse cx="328" cy="345" rx="8" ry="13" fill="#c99073"/>
+
+                    <!-- KAKI -->
+
+                    <ellipse cx="296" cy="366" rx="10" ry="6" fill="#b98065"/>
+                    <ellipse cx="318" cy="366" rx="10" ry="6" fill="#b98065"/>
+
+                    <!-- PITA -->
+
+                    <path
+                        d="M296 335 Q307 328 318 335"
+                        fill="none"
+                        stroke="#fff0d7"
+                        stroke-width="3"
+                    />
+
+                    <path
+                        d="M303 335 L307 341 L311 335"
+                        fill="#e75e9e"
+                        stroke="none"
+                    />
+
+                </g>
+
+                <!-- PANDA FULL BODY -->
+
+                <g
+                    class="panda-character"
+                    stroke="#383347"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                >
+
+                    <!-- TELINGA -->
+
+                    <circle cx="636" cy="316" r="15" fill="#30303c"/>
+                    <circle cx="665" cy="316" r="15" fill="#30303c"/>
+
+                    <!-- BADAN -->
+
+                    <ellipse cx="650" cy="342" rx="26" ry="30" fill="#fffdfb"/>
+
+                    <ellipse
+                        cx="650"
+                        cy="346"
+                        rx="14"
+                        ry="18"
+                        fill="#30303c"
+                        stroke="none"
+                    />
+
+                    <!-- KEPALA -->
+
+                    <circle cx="650" cy="310" r="25" fill="#fffdfb"/>
+
+                    <!-- AREA MATA -->
+
+                    <ellipse
+                        cx="639"
+                        cy="310"
+                        rx="7"
+                        ry="10"
+                        fill="#30303c"
+                        stroke="none"
+                        transform="rotate(25 639 310)"
+                    />
+
+                    <ellipse
+                        cx="661"
+                        cy="310"
+                        rx="7"
+                        ry="10"
+                        fill="#30303c"
+                        stroke="none"
+                        transform="rotate(-25 661 310)"
+                    />
+
+                    <circle cx="640" cy="309" r="2.5" fill="#fff" stroke="none"/>
+                    <circle cx="660" cy="309" r="2.5" fill="#fff" stroke="none"/>
+
+                    <!-- HIDUNG -->
+
+                    <ellipse
+                        cx="650"
+                        cy="318"
+                        rx="4.5"
+                        ry="3.5"
+                        fill="#30303c"
+                        stroke="none"
+                    />
+
+                    <!-- MULUT -->
+
+                    <path
+                        d="M646 323 Q650 327 654 323"
+                        fill="none"
+                        stroke="#30303c"
+                        stroke-width="1.5"
+                    />
+
+                    <!-- TANGAN -->
+
+                    <ellipse cx="631" cy="345" rx="8" ry="13" fill="#30303c"/>
+                    <ellipse cx="669" cy="345" rx="8" ry="13" fill="#30303c"/>
+
+                    <!-- KAKI -->
+
+                    <ellipse cx="641" cy="367" rx="10" ry="6" fill="#30303c"/>
+                    <ellipse cx="660" cy="367" rx="10" ry="6" fill="#30303c"/>
+
+                    <!-- PITA -->
+
+                    <path
+                        d="M642 337 Q650 331 658 337"
+                        fill="none"
+                        stroke="#e45b99"
+                        stroke-width="3"
+                    />
+
+                    <path
+                        d="M650 335 l-4 5 h8z"
+                        fill="#e45b99"
+                        stroke="none"
+                    />
+
+                </g>
+
+                <!-- RUMPUT TAMBAHAN -->
+
+                <g
+                    class="grass-blades"
+                    stroke="#8fbd8a"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                >
+                    <path d="M112 383 l-5 -15"/>
+                    <path d="M117 383 l7 -19"/>
+                    <path d="M470 387 l-3 -16"/>
+                    <path d="M476 387 l8 -13"/>
+                    <path d="M687 385 l-2 -14"/>
+                </g>
+
+                <!-- HATI KECIL -->
+
+                <g class="small-hearts" fill="#ec70ad">
+
+                    <path d="M264 165 C258 157 247 164 264 178 C281 164 270 157 264 165Z"/>
+
+                    <path d="M485 126 C479 118 468 125 485 139 C502 125 491 118 485 126Z"/>
+
+                    <path d="M457 324 C451 316 440 323 457 337 C474 323 463 316 457 324Z"/>
+
+                </g>
+
+                <text
+                    x="380"
+                    y="414"
+                    text-anchor="middle"
+                    fill="#a16c91"
+                    font-family="Georgia, serif"
+                    font-size="15"
+                >
+                    a garden full of little wishes ♡
+                </text>
+
+            </svg>
+
+            <div class="scene-caption">
+                <span>🌸</span>
+                a little happiness, just for you
+                <span>🌸</span>
             </div>
 
-            <p id="tree-message" class="tree-message">
-                Sebentar ya, ada sesuatu yang tumbuh untukmu... 🌱
-            </p>
+        </div>
 
-            <button id="open-letter" class="button">
-                Buka Surat Pagi 💌
-            </button>
+        <div class="tree-status">
+            <span class="status-dot"></span>
 
-        </section>
+            <span id="treeMessage">
+                Bunga dan hati sedang bermekaran untukmu...
+            </span>
+        </div>
 
-        <section id="letter" class="letter hidden">
+        <button class="button primary" id="openLetter" type="button">
+            Buka surat pagi <span>✉</span>
+        </button>
 
-            <h2>💌 Surat Kecil Untukmu</h2>
+        <p class="signature">
+            made with care, just for Gabriela ♡
+        </p>
+
+    </section>
+
+    <!-- SURAT CINTA -->
+
+    <section class="letter-panel hidden" id="letterPanel" aria-live="polite">
+
+        <div class="letter-decoration">
+            ✿　A LITTLE LETTER　✿
+        </div>
+
+        <article class="paper">
+
+            <div class="paper-stamp">🌷</div>
 
             <p class="greeting">
                 Selamat pagi, Gabriela! ☀️💗
@@ -96,7 +856,7 @@
             <p>
                 Semoga hari ini menjadi hari yang indah untukmu.
                 Semoga semua urusanmu dipermudah, kamu selalu sehat,
-                dan banyak hal menyenangkan datang menghampirimu. 🌷
+                dan banyak hal menyenangkan datang menghampirimu.
             </p>
 
             <p>
@@ -112,43 +872,58 @@
             </p>
 
             <p class="signoff">
-                Have a wonderful day, Gabriela! 🌸
+                Have a wonderful day, Gabriela!<br>
+                <span>with a little love ♡</span>
             </p>
 
-            <button id="show-surprise" class="button">
-                Ada Satu Kejutan Lagi ❤️
+            <button class="button primary wide" id="showSurprise" type="button">
+                Masih ada satu kejutan <span>♥</span>
             </button>
 
-        </section>
+        </article>
 
-        <section id="ending" class="ending hidden">
+    </section>
 
-            <div class="ending-animals">🧸 💗 🐼</div>
+    <!-- KEJUTAN TERAKHIR -->
 
-            <p>One last thing...</p>
+    <section class="ending-panel hidden" id="endingPanel" aria-live="polite">
 
-            <h2>
-                I LOVE YOU,<br>
-                <span>GABRIELA</span> ❤️
-            </h2>
+        <div class="ending-friends">
+            <span>🧸</span>
+            <span class="big-heart">💗</span>
+            <span>🐼</span>
+        </div>
 
-            <p>Semoga hari-harimu selalu penuh kebahagiaan. 🌷</p>
+        <p class="ending-kicker">
+            ONE LAST THING...
+        </p>
 
-            <div id="heart-rain" class="heart-rain"></div>
+        <h2>
+            I LOVE YOU,<br>
+            <span>GABRIELA</span> ♥
+        </h2>
 
-            <button id="read-again" class="button secondary">
-                Baca Surat Lagi 💌
-            </button>
+        <p class="ending-message">
+            Semoga hari-harimu selalu punya alasan untuk tersenyum. 🌷
+        </p>
 
-        </section>
+        <div class="heart-rain" id="heartRain" aria-hidden="true"></div>
 
-        <footer>
-            Made with love ♡ just for Gabriela
-        </footer>
+        <button class="button secondary" id="readAgain" type="button">
+            Baca surat lagi ✉
+        </button>
 
-    </main>
+    </section>
 
-    <script src="script.js"></script>
+    <footer class="footer">
+        <span>crafted with</span>
+        <span class="footer-heart">♥</span>
+        <span>for Gabriela</span>
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
 
 </body>
 </html>
