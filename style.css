@@ -2,432 +2,624 @@
     box-sizing: border-box;
 }
 
+:root {
+    --ink: #67445c;
+    --muted: #a67b96;
+    --pink: #df5597;
+    --pink-dark: #c74687;
+    --line: #f0d7e5;
+}
+
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
     margin: 0;
-    background: #fff6fa;
-    color: #754763;
+    background: #fff7fb;
+    color: var(--ink);
     font-family: Georgia, "Times New Roman", serif;
 }
 
-.container {
+button {
+    font: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.site {
     width: 100%;
-    max-width: 760px;
-    margin: auto;
-    background: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
     overflow: hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-shadow: 0 10px 50px #9e557412;
 }
 
-.header {
+.topbar {
+    height: 52px;
+    padding: 0 22px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 12px;
-    padding: 15px;
+    border-bottom: 1px solid #f7e4ee;
     background: #fffafd;
-    border-bottom: 1px solid #f5dce8;
+    font: 11px Arial, sans-serif;
 }
 
-.header span {
-    color: #e45b99;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #865975;
+    text-decoration: none;
+    letter-spacing: .25px;
+}
+
+.brand-heart {
     font-size: 20px;
+    color: #e25d9d;
 }
 
-.header p {
-    margin: 0;
-    font: 12px Arial, sans-serif;
+.to-label {
+    margin-left: auto;
+    color: #b07898;
+}
+
+.to-label span {
+    color: #df78ad;
+    font-size: 15px;
 }
 
 .hero {
     position: relative;
+    isolation: isolate;
     overflow: hidden;
     text-align: center;
-    padding: 35px 15px 25px;
+    padding: 38px 18px 29px;
     background: linear-gradient(
-        150deg,
+        145deg,
         #fff9fc,
-        #ffe6f0,
-        #f2e9ff
+        #ffedf5 48%,
+        #f0eaff
     );
 }
 
-.subtitle {
+.eyebrow {
+    font: 9px Arial, sans-serif;
+    letter-spacing: 2.5px;
     color: #b66b92;
-    font: 10px Arial, sans-serif;
-    letter-spacing: 3px;
+    margin: 0 0 13px;
 }
 
 h1 {
+    font-size: clamp(32px, 6vw, 53px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin: 0;
     color: #70455f;
-    font-size: clamp(29px, 7vw, 45px);
-    line-height: 1.2;
 }
 
-h1 span {
+h1 span:first-child {
     color: #d94e91;
 }
 
-.description {
-    color: #9b718b;
-    font: 13px Arial, sans-serif;
-    line-height: 1.7;
+.title-flower {
+    font-size: .72em;
 }
 
-.characters {
+.intro {
+    font: 13px/1.7 Arial, sans-serif;
+    color: #9b718b;
+    margin: 13px auto 24px;
+}
+
+.floating {
+    position: absolute;
+    pointer-events: none;
+    color: #df83b1;
+    opacity: .7;
+    animation: floaty 4s ease-in-out infinite;
+}
+
+.flower {
+    font-size: 23px;
+}
+
+.flower-a {
+    top: 14%;
+    left: 8%;
+}
+
+.flower-b {
+    top: 34%;
+    right: 7%;
+    animation-delay: 1s;
+}
+
+.twinkle {
+    font-size: 24px;
+}
+
+.twinkle-a {
+    top: 21%;
+    right: 13%;
+    animation-delay: .5s;
+}
+
+.twinkle-b {
+    top: 56%;
+    left: 5%;
+    animation-delay: 1.5s;
+}
+
+/* KARTU TAMAN ANIME */
+
+.scene-card {
+    width: min(100%, 800px);
+    margin: 0 auto;
+    border: 1px solid #f3d6e5;
+    border-radius: 24px;
+    padding: 11px 11px 0;
+    background: #fffafc;
+    box-shadow: 0 15px 40px #b65d8b15;
+    overflow: hidden;
+}
+
+.scene-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 5px 0 9px;
+    color: #b17b9a;
+    font: 10px Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.live-dot,
+.status-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #e46ca6;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #fbe0ec;
+}
+
+.storybook {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+/* KETERANGAN TAMAN */
+
+.scene-caption {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    gap: clamp(5px, 3vw, 22px);
-    margin: 35px auto 10px;
-    min-height: 145px;
-}
-
-.anime {
-    position: relative;
-    width: 85px;
-    flex-shrink: 0;
-    animation: float 3s ease-in-out infinite;
-}
-
-.anime-boy {
-    animation-delay: 0.7s;
-}
-
-.face {
-    position: relative;
-    width: 54px;
-    height: 64px;
-    margin: auto;
-    background: #ffdfd3;
-    border: 1px solid #e4b3a4;
-    border-radius: 45%;
-    z-index: 2;
-}
-
-.hair {
-    position: absolute;
-    z-index: 3;
-    top: -4px;
-    left: calc(50% - 31px);
-    width: 62px;
-    height: 35px;
-    background: #573b4b;
-    border-radius: 50% 50% 25% 20%;
-    clip-path: polygon(
-        0 0, 100% 0, 100% 65%, 80% 55%,
-        70% 100%, 52% 60%, 32% 95%,
-        22% 60%, 0 75%
-    );
-}
-
-.anime-boy .hair {
-    background: #3e3a50;
-}
-
-.eye {
-    position: absolute;
-    top: 28px;
-    width: 6px;
-    height: 10px;
-    background: #50334a;
-    border-radius: 50%;
-}
-
-.eye.left {
-    left: 12px;
-}
-
-.eye.right {
-    right: 12px;
-}
-
-.blush {
-    position: absolute;
-    top: 42px;
-    width: 9px;
-    height: 5px;
-    background: #f39eaa;
-    border-radius: 50%;
-}
-
-.blush.left {
-    left: 4px;
-}
-
-.blush.right {
-    right: 4px;
-}
-
-.mouth {
-    position: absolute;
-    bottom: 10px;
-    left: 24px;
-    width: 7px;
-    height: 4px;
-    border-bottom: 2px solid #b85f79;
-    border-radius: 50%;
-}
-
-.body {
-    width: 66px;
-    height: 38px;
-    margin: -1px auto 0;
-    border-radius: 22px 22px 6px 6px;
-    color: white;
-    padding-top: 5px;
-    font-size: 20px;
-}
-
-.girl-body {
-    background: #f1a4c5;
-}
-
-.boy-body {
-    background: #a3a0dd;
-}
-
-.anime small {
-    display: block;
-    margin-top: 6px;
-    font: 9px Arial, sans-serif;
-    color: #a36588;
-    white-space: nowrap;
-}
-
-.animals {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-bottom: 17px;
-}
-
-.animal {
-    font-size: 33px;
-    animation: float 2.5s ease-in-out infinite;
-}
-
-.panda {
-    animation-delay: 0.5s;
-}
-
-.tree-area {
-    position: relative;
-    height: 180px;
-    max-width: 420px;
-    margin: 10px auto 0;
-}
-
-.tree {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    width: 190px;
-    height: 160px;
-    transform: translateX(-50%);
-}
-
-.trunk {
-    position: absolute;
-    bottom: 0;
-    left: 86px;
-    width: 19px;
-    height: 85px;
-    border-radius: 7px;
-    background: linear-gradient(
-        90deg,
-        #8d5745,
-        #bd8664,
-        #8a503e
-    );
-    transform: scaleY(0);
-    transform-origin: bottom;
-    animation: grow 1.5s forwards;
-}
-
-.branch {
-    position: absolute;
-    bottom: 58px;
-    left: 94px;
-    width: 5px;
-    height: 50px;
-    background: #95604a;
-    border-radius: 5px;
-    transform-origin: bottom;
-    transform: rotate(-40deg) scaleY(0);
-    animation: branch-grow 1s 1s forwards;
-}
-
-.branch-right {
-    transform: rotate(40deg) scaleY(0);
-    animation-delay: 1.3s;
-}
-
-.leaves {
-    position: absolute;
-    inset: 0 0 45px;
-}
-
-.leaf {
-    position: absolute;
-    opacity: 0;
-    animation: pop 0.5s forwards;
-}
-
-.ground {
-    position: absolute;
-    bottom: 8px;
-    left: 5%;
-    right: 5%;
-    height: 2px;
-    background: #ad8a91;
-}
-
-.tree-message {
-    color: #a87996;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 4px 12px;
+    color: #a87896;
     font: 11px Arial, sans-serif;
-    line-height: 1.6;
 }
+
+.scene-caption span {
+    font-size: 13px;
+}
+
+.tree-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 42px;
+    padding: 8px 5px;
+    color: #a87996;
+    font: 11px/1.5 Arial, sans-serif;
+}
+
+/* TOMBOL */
 
 .button {
-    display: inline-block;
-    max-width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     min-height: 48px;
-    margin: 12px auto;
-    padding: 14px 22px;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(110deg, #e45b99, #b775cf);
-    color: white;
-    font: bold 13px Arial, sans-serif;
+    max-width: 100%;
+    padding: 13px 23px;
+    border: 0;
+    border-radius: 999px;
+    font: 600 13px Arial, sans-serif;
     cursor: pointer;
-    box-shadow: 0 6px 16px #c95b9826;
+    touch-action: manipulation;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.primary {
+    color: white;
+    background: linear-gradient(
+        110deg,
+        #e45b99,
+        #b775cf
+    );
+    box-shadow: 0 7px 18px #c95b982b;
 }
 
 .button:active {
-    transform: scale(0.98);
+    transform: scale(.98);
 }
 
-.secondary {
-    background: white;
-    color: #b34d87;
-    border: 1px solid #edc6db;
+.button:focus-visible {
+    outline: 3px solid #8e5ab5;
+    outline-offset: 3px;
 }
 
-.letter,
-.ending {
-    margin: 15px 12px 20px;
-    padding: 22px 17px;
+.button:disabled {
+    opacity: .7;
+}
+
+.signature {
+    margin: 17px 0 0;
+    color: #bd8ba7;
+    font: 10px Arial, sans-serif;
+    letter-spacing: .3px;
+}
+
+/* SURAT */
+
+.letter-panel,
+.ending-panel {
+    margin: 18px 14px 22px;
+    padding: 22px;
     border: 1px solid #f0d7e5;
-    border-radius: 16px;
+    border-radius: 18px;
     background: #fffdf9;
-    box-shadow: 0 8px 25px #a8557b0c;
+    box-shadow: 0 10px 30px #a8557b0c;
 }
 
-.letter h2 {
+.letter-decoration {
     text-align: center;
-    color: #b64e87;
-    font-size: 22px;
+    color: #ce7ba5;
+    font: 10px Arial, sans-serif;
+    letter-spacing: 2px;
+    margin: 0 0 15px;
 }
 
-.letter p {
+.paper {
+    position: relative;
+    max-width: 650px;
+    margin: auto;
+    padding: 24px clamp(16px, 4vw, 35px);
+    border: 1px solid #f4e1d9;
+    border-radius: 12px;
+    background: linear-gradient(
+        180deg,
+        #fffefb,
+        #fffaf5
+    );
+    text-align: left;
+}
+
+.paper-stamp {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-size: 25px;
+    opacity: .75;
+}
+
+.paper p {
     font-size: 14px;
     line-height: 1.9;
+    color: #76576b;
+    margin: 0 0 14px;
 }
 
-.greeting {
-    color: #c64e8b;
+.paper .greeting {
+    font-size: 17px;
     font-weight: bold;
+    color: #c64e8b;
+    padding-right: 45px;
 }
 
-.signoff {
+.paper .signoff {
     text-align: center;
     color: #b34d87;
     font-weight: bold;
+    margin: 20px 0 0;
 }
 
-.ending {
+.signoff span {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.wide {
+    display: flex;
+    width: 100%;
+    white-space: normal;
+    line-height: 1.4;
+    margin: 20px auto 0;
+}
+
+/* KEJUTAN TERAKHIR */
+
+.ending-panel {
     text-align: center;
-    background: linear-gradient(145deg, #ffe8f1, #f2e8ff);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        145deg,
+        #ffe8f1,
+        #f2e8ff
+    );
 }
 
-.ending-animals {
+.ending-friends {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
     font-size: 38px;
-    animation: float 2.5s infinite;
+    animation: floaty 3s ease-in-out infinite;
 }
 
-.ending h2 {
+.big-heart {
+    font-size: 33px;
+}
+
+.ending-kicker {
+    font: 9px Arial, sans-serif;
+    letter-spacing: 2.4px;
+    color: #b3759b;
+    margin: 15px 0 9px;
+}
+
+.ending-panel h2 {
+    font-size: clamp(31px, 7vw, 49px);
+    line-height: 1.17;
     color: #d6448c;
-    font-size: clamp(28px, 8vw, 44px);
-    line-height: 1.25;
+    margin: 0;
+    overflow-wrap: anywhere;
     animation: heartbeat 1.8s infinite;
 }
 
-.ending h2 span {
-    overflow-wrap: anywhere;
+.ending-panel h2 span {
+    letter-spacing: 1.5px;
 }
 
-.ending p {
-    font: 13px/1.8 Arial, sans-serif;
+.ending-message {
+    font: 12px/1.7 Arial, sans-serif;
+    color: #9d6b8e;
+    margin: 13px auto;
 }
 
 .heart-rain {
-    position: relative;
     height: 45px;
+    position: relative;
     overflow: hidden;
 }
 
 .rain-heart {
     position: absolute;
-    bottom: -25px;
-    animation: rise 3s linear forwards;
+    bottom: -28px;
+    animation: rise 3.4s linear forwards;
 }
+
+.secondary {
+    background: #fff;
+    color: #b34d87;
+    border: 1px solid #edc6db;
+    box-shadow: 0 3px 10px #c95b9810;
+}
+
+/* FOOTER */
 
 .hidden {
     display: none !important;
 }
 
-footer {
-    padding: 17px 10px;
-    text-align: center;
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    align-items: center;
+    padding: 16px 10px;
     background: #fffafd;
     color: #b28aa4;
     font: 10px Arial, sans-serif;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-7px);
-    }
+.footer-heart {
+    color: #e16ba5;
 }
 
-@keyframes grow {
-    to {
-        transform: scaleY(1);
-    }
+/* ANIMASI POHON DAN KARAKTER */
+
+.storybook .tree-sway {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation:
+        treeGrow 1.8s cubic-bezier(.2, .8, .2, 1) .25s both,
+        treeSway 5s ease-in-out 2.1s infinite;
 }
 
-@keyframes branch-grow {
-    to {
-        transform: rotate(-40deg) scaleY(1);
-    }
+.storybook .tree-crown {
+    transform-box: fill-box;
+    transform-origin: 50% 70%;
+    animation: crownSway 4.2s ease-in-out 1.8s infinite;
 }
 
-@keyframes pop {
-    to {
+.storybook .tree-hearts {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: heartTwinkle 2.4s ease-in-out 2s infinite;
+}
+
+.storybook .cloud-one {
+    animation: cloudDrift 14s ease-in-out infinite alternate;
+}
+
+.storybook .cloud-two {
+    animation: cloudDrift 17s ease-in-out infinite alternate-reverse;
+}
+
+.storybook .girl-character {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: characterSway 3.5s ease-in-out infinite;
+}
+
+.storybook .boy-character {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: characterSway 4s ease-in-out infinite reverse;
+}
+
+.storybook .bear-character {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: petBounce 2.8s ease-in-out infinite;
+}
+
+.storybook .panda-character {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: petBounce 3.2s ease-in-out infinite .4s;
+}
+
+.storybook .petal-one {
+    animation: petalFloat 6s linear infinite;
+}
+
+.storybook .petal-two {
+    animation: petalFloat 7s linear infinite -2s;
+}
+
+.storybook .petal-three {
+    animation: petalFloat 5.5s linear infinite -1s;
+}
+
+/* KEYFRAMES */
+
+@keyframes treeGrow {
+    0% {
+        transform: scaleY(.03);
+        opacity: 0;
+    }
+
+    70% {
         opacity: 1;
-        transform: scale(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes heartTwinkle {
+    0%, 100% {
+        opacity: .72;
+        transform: scale(.96);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+}
+
+@keyframes floaty {
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(3deg);
+    }
+}
+
+@keyframes treeSway {
+    0%, 100% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(1.5deg);
+    }
+}
+
+@keyframes crownSway {
+    0%, 100% {
+        transform: rotate(-1deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(1.5deg) translateY(-2px);
+    }
+}
+
+@keyframes cloudDrift {
+    from {
+        translate: -5px 0;
+    }
+
+    to {
+        translate: 12px 2px;
+    }
+}
+
+@keyframes characterSway {
+    0%, 100% {
+        transform: translateY(0) rotate(-.5deg);
+    }
+
+    50% {
+        transform: translateY(-3px) rotate(.8deg);
+    }
+}
+
+@keyframes petBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    45% {
+        transform: translateY(-5px) rotate(-2deg);
+    }
+
+    65% {
+        transform: translateY(0) rotate(2deg);
+    }
+}
+
+@keyframes petalFloat {
+    0% {
+        transform: translate(0, -10px) rotate(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .9;
+    }
+
+    100% {
+        transform: translate(20px, 95px) rotate(160deg);
+        opacity: 0;
     }
 }
 
 @keyframes rise {
     to {
-        transform: translateY(-80px);
+        transform: translateY(-100px) rotate(25deg);
         opacity: 0;
     }
 }
@@ -436,65 +628,103 @@ footer {
     0%, 100% {
         transform: scale(1);
     }
+
     15% {
-        transform: scale(1.03);
+        transform: scale(1.025);
     }
+
     30% {
         transform: scale(1);
     }
 }
 
-@media (min-width: 600px) {
+/* LAPTOP DAN TABLET */
+
+@media (min-width: 700px) {
+
     .hero {
-        padding: 45px 25px 30px;
+        padding: 43px 28px 34px;
     }
 
-    .characters {
-        min-height: 170px;
+    .intro {
+        font-size: 14px;
     }
 
-    .letter,
-    .ending {
-        margin: 22px 25px;
+    .scene-card {
+        padding: 14px 14px 0;
+    }
+
+    .letter-panel,
+    .ending-panel {
+        margin: 24px 34px;
         padding: 28px;
     }
 
-    .letter p {
+    .paper p {
         font-size: 15px;
     }
 }
 
-@media (max-width: 360px) {
+/* HP */
+
+@media (max-width: 420px) {
+
+    .topbar {
+        padding: 0 13px;
+    }
+
     .hero {
-        padding-left: 9px;
-        padding-right: 9px;
+        padding: 30px 10px 23px;
     }
 
-    .characters {
-        gap: 0;
+    .scene-card {
+        padding: 7px 7px 0;
+        border-radius: 18px;
     }
 
-    .anime {
-        transform: scale(0.9);
+    .scene-label {
+        font-size: 9px;
     }
 
-    .animal {
-        font-size: 29px;
+    .scene-caption {
+        font-size: 10px;
     }
 
-    .letter,
-    .ending {
-        margin: 10px;
-        padding: 15px 12px;
+    .letter-panel,
+    .ending-panel {
+        margin: 12px 9px;
+        padding: 15px;
+    }
+
+    .paper {
+        padding: 21px 15px;
+    }
+
+    .paper p {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .paper .greeting {
+        font-size: 16px;
+    }
+
+    .ending-friends {
+        font-size: 32px;
+        gap: 10px;
     }
 }
 
+/* PENGATURAN ANIMASI UNTUK PENGGUNA YANG MEMATIKAN MOTION */
+
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
+        animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
+        transition: none !important;
     }
 }
