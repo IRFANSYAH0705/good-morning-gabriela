@@ -1,0 +1,500 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #fff6fa;
+    color: #754763;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    background: white;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #fffafd;
+    border-bottom: 1px solid #f5dce8;
+}
+
+.header span {
+    color: #e45b99;
+    font-size: 20px;
+}
+
+.header p {
+    margin: 0;
+    font: 12px Arial, sans-serif;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 35px 15px 25px;
+    background: linear-gradient(
+        150deg,
+        #fff9fc,
+        #ffe6f0,
+        #f2e9ff
+    );
+}
+
+.subtitle {
+    color: #b66b92;
+    font: 10px Arial, sans-serif;
+    letter-spacing: 3px;
+}
+
+h1 {
+    color: #70455f;
+    font-size: clamp(29px, 7vw, 45px);
+    line-height: 1.2;
+}
+
+h1 span {
+    color: #d94e91;
+}
+
+.description {
+    color: #9b718b;
+    font: 13px Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.characters {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(5px, 3vw, 22px);
+    margin: 35px auto 10px;
+    min-height: 145px;
+}
+
+.anime {
+    position: relative;
+    width: 85px;
+    flex-shrink: 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+.anime-boy {
+    animation-delay: 0.7s;
+}
+
+.face {
+    position: relative;
+    width: 54px;
+    height: 64px;
+    margin: auto;
+    background: #ffdfd3;
+    border: 1px solid #e4b3a4;
+    border-radius: 45%;
+    z-index: 2;
+}
+
+.hair {
+    position: absolute;
+    z-index: 3;
+    top: -4px;
+    left: calc(50% - 31px);
+    width: 62px;
+    height: 35px;
+    background: #573b4b;
+    border-radius: 50% 50% 25% 20%;
+    clip-path: polygon(
+        0 0, 100% 0, 100% 65%, 80% 55%,
+        70% 100%, 52% 60%, 32% 95%,
+        22% 60%, 0 75%
+    );
+}
+
+.anime-boy .hair {
+    background: #3e3a50;
+}
+
+.eye {
+    position: absolute;
+    top: 28px;
+    width: 6px;
+    height: 10px;
+    background: #50334a;
+    border-radius: 50%;
+}
+
+.eye.left {
+    left: 12px;
+}
+
+.eye.right {
+    right: 12px;
+}
+
+.blush {
+    position: absolute;
+    top: 42px;
+    width: 9px;
+    height: 5px;
+    background: #f39eaa;
+    border-radius: 50%;
+}
+
+.blush.left {
+    left: 4px;
+}
+
+.blush.right {
+    right: 4px;
+}
+
+.mouth {
+    position: absolute;
+    bottom: 10px;
+    left: 24px;
+    width: 7px;
+    height: 4px;
+    border-bottom: 2px solid #b85f79;
+    border-radius: 50%;
+}
+
+.body {
+    width: 66px;
+    height: 38px;
+    margin: -1px auto 0;
+    border-radius: 22px 22px 6px 6px;
+    color: white;
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.girl-body {
+    background: #f1a4c5;
+}
+
+.boy-body {
+    background: #a3a0dd;
+}
+
+.anime small {
+    display: block;
+    margin-top: 6px;
+    font: 9px Arial, sans-serif;
+    color: #a36588;
+    white-space: nowrap;
+}
+
+.animals {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 17px;
+}
+
+.animal {
+    font-size: 33px;
+    animation: float 2.5s ease-in-out infinite;
+}
+
+.panda {
+    animation-delay: 0.5s;
+}
+
+.tree-area {
+    position: relative;
+    height: 180px;
+    max-width: 420px;
+    margin: 10px auto 0;
+}
+
+.tree {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 190px;
+    height: 160px;
+    transform: translateX(-50%);
+}
+
+.trunk {
+    position: absolute;
+    bottom: 0;
+    left: 86px;
+    width: 19px;
+    height: 85px;
+    border-radius: 7px;
+    background: linear-gradient(
+        90deg,
+        #8d5745,
+        #bd8664,
+        #8a503e
+    );
+    transform: scaleY(0);
+    transform-origin: bottom;
+    animation: grow 1.5s forwards;
+}
+
+.branch {
+    position: absolute;
+    bottom: 58px;
+    left: 94px;
+    width: 5px;
+    height: 50px;
+    background: #95604a;
+    border-radius: 5px;
+    transform-origin: bottom;
+    transform: rotate(-40deg) scaleY(0);
+    animation: branch-grow 1s 1s forwards;
+}
+
+.branch-right {
+    transform: rotate(40deg) scaleY(0);
+    animation-delay: 1.3s;
+}
+
+.leaves {
+    position: absolute;
+    inset: 0 0 45px;
+}
+
+.leaf {
+    position: absolute;
+    opacity: 0;
+    animation: pop 0.5s forwards;
+}
+
+.ground {
+    position: absolute;
+    bottom: 8px;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: #ad8a91;
+}
+
+.tree-message {
+    color: #a87996;
+    font: 11px Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    max-width: 100%;
+    min-height: 48px;
+    margin: 12px auto;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(110deg, #e45b99, #b775cf);
+    color: white;
+    font: bold 13px Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 6px 16px #c95b9826;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.secondary {
+    background: white;
+    color: #b34d87;
+    border: 1px solid #edc6db;
+}
+
+.letter,
+.ending {
+    margin: 15px 12px 20px;
+    padding: 22px 17px;
+    border: 1px solid #f0d7e5;
+    border-radius: 16px;
+    background: #fffdf9;
+    box-shadow: 0 8px 25px #a8557b0c;
+}
+
+.letter h2 {
+    text-align: center;
+    color: #b64e87;
+    font-size: 22px;
+}
+
+.letter p {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.greeting {
+    color: #c64e8b;
+    font-weight: bold;
+}
+
+.signoff {
+    text-align: center;
+    color: #b34d87;
+    font-weight: bold;
+}
+
+.ending {
+    text-align: center;
+    background: linear-gradient(145deg, #ffe8f1, #f2e8ff);
+}
+
+.ending-animals {
+    font-size: 38px;
+    animation: float 2.5s infinite;
+}
+
+.ending h2 {
+    color: #d6448c;
+    font-size: clamp(28px, 8vw, 44px);
+    line-height: 1.25;
+    animation: heartbeat 1.8s infinite;
+}
+
+.ending h2 span {
+    overflow-wrap: anywhere;
+}
+
+.ending p {
+    font: 13px/1.8 Arial, sans-serif;
+}
+
+.heart-rain {
+    position: relative;
+    height: 45px;
+    overflow: hidden;
+}
+
+.rain-heart {
+    position: absolute;
+    bottom: -25px;
+    animation: rise 3s linear forwards;
+}
+
+.hidden {
+    display: none !important;
+}
+
+footer {
+    padding: 17px 10px;
+    text-align: center;
+    background: #fffafd;
+    color: #b28aa4;
+    font: 10px Arial, sans-serif;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes grow {
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes branch-grow {
+    to {
+        transform: rotate(-40deg) scaleY(1);
+    }
+}
+
+@keyframes pop {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    15% {
+        transform: scale(1.03);
+    }
+    30% {
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 600px) {
+    .hero {
+        padding: 45px 25px 30px;
+    }
+
+    .characters {
+        min-height: 170px;
+    }
+
+    .letter,
+    .ending {
+        margin: 22px 25px;
+        padding: 28px;
+    }
+
+    .letter p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .characters {
+        gap: 0;
+    }
+
+    .anime {
+        transform: scale(0.9);
+    }
+
+    .animal {
+        font-size: 29px;
+    }
+
+    .letter,
+    .ending {
+        margin: 10px;
+        padding: 15px 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
