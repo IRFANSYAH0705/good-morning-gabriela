@@ -1,116 +1,74 @@
-const leaves = document.getElementById("leaves");
-const treeMessage = document.getElementById("tree-message");
+const openLetter = document.getElementById("openLetter");
+const letterPanel = document.getElementById("letterPanel");
+const showSurprise = document.getElementById("showSurprise");
+const endingPanel = document.getElementById("endingPanel");
+const readAgain = document.getElementById("readAgain");
 
-const openLetter = document.getElementById("open-letter");
-const letter = document.getElementById("letter");
+// Membuka surat pagi
+openLetter.addEventListener("click", () => {
+    letterPanel.classList.remove("hidden");
 
-const showSurprise = document.getElementById("show-surprise");
-const ending = document.getElementById("ending");
-
-const readAgain = document.getElementById("read-again");
-
-function growTree() {
-    if (leaves.dataset.grown === "yes") {
-        return;
-    }
-
-    leaves.dataset.grown = "yes";
-
-    const decorations = [
-        "💗",
-        "🌸",
-        "💕",
-        "🌷",
-        "💖",
-        "♡"
-    ];
-
-    for (let i = 0; i < 35; i++) {
-        const leaf = document.createElement("span");
-
-        leaf.className = "leaf";
-
-        leaf.textContent =
-            decorations[
-                Math.floor(Math.random() * decorations.length)
-            ];
-
-        leaf.style.left = (Math.random() * 90) + "%";
-        leaf.style.top = (Math.random() * 75) + "%";
-
-        leaf.style.fontSize =
-            (12 + Math.random() * 10) + "px";
-
-        leaf.style.animationDelay =
-            (1.5 + Math.random() * 2) + "s";
-
-        leaves.appendChild(leaf);
-    }
-
-    treeMessage.textContent =
-        "Pohon cinta ini berbunga untukmu! 💗";
-}
-
-window.setTimeout(growTree, 500);
-
-openLetter.addEventListener("click", function () {
-    letter.classList.remove("hidden");
-
-    openLetter.textContent = "Surat Sudah Terbuka 💗";
+    openLetter.textContent = "Surat sudah terbuka 💗";
     openLetter.disabled = true;
 
-    letter.scrollIntoView({
+    letterPanel.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
 });
 
-function showHearts() {
-    const heartRain = document.getElementById("heart-rain");
+// Membuat animasi hati
+function createHeartRain() {
+    const rain = document.getElementById("heartRain");
 
-    heartRain.replaceChildren();
+    rain.replaceChildren();
 
-    const hearts = ["💗", "💕", "💖", "♥", "✨"];
+    const symbols = ["💗", "💕", "💖", "♥", "✨"];
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 24; i++) {
         const heart = document.createElement("span");
 
         heart.className = "rain-heart";
-        heart.textContent = hearts[i % hearts.length];
 
-        heart.style.left = (Math.random() * 95) + "%";
+        heart.textContent = symbols[i % symbols.length];
+
+        heart.style.left = (Math.random() * 96) + "%";
 
         heart.style.animationDelay =
             (Math.random() * 1.5) + "s";
 
         heart.style.fontSize =
-            (14 + Math.random() * 12) + "px";
+            (14 + Math.random() * 14) + "px";
 
-        heartRain.appendChild(heart);
+        rain.appendChild(heart);
 
-        window.setTimeout(function () {
+        window.setTimeout(() => {
             heart.remove();
-        }, 5000);
+        }, 5200);
     }
 }
 
-showSurprise.addEventListener("click", function () {
-    letter.classList.add("hidden");
-    ending.classList.remove("hidden");
+// Membuka kejutan terakhir
+showSurprise.addEventListener("click", () => {
+    letterPanel.classList.add("hidden");
 
-    showHearts();
+    endingPanel.classList.remove("hidden");
 
-    ending.scrollIntoView({
+    createHeartRain();
+
+    endingPanel.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
 });
 
-readAgain.addEventListener("click", function () {
-    ending.classList.add("hidden");
-    letter.classList.remove("hidden");
+// Kembali membaca surat
+readAgain.addEventListener("click", () => {
+    endingPanel.classList.add("hidden");
 
-    letter.scrollIntoView({
+    letterPanel.classList.remove("hidden");
+
+    letterPanel.scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
