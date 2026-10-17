@@ -25,26 +25,25 @@ function createHeartRain() {
 
     const symbols = ["💗", "💕", "💖", "♥", "✨"];
 
-    for (let i = 0; i < 24; i++) {
+    for (let i = 0; i < 18; i++) {
         const heart = document.createElement("span");
 
         heart.className = "rain-heart";
-
         heart.textContent = symbols[i % symbols.length];
 
         heart.style.left = (Math.random() * 96) + "%";
 
         heart.style.animationDelay =
-            (Math.random() * 1.5) + "s";
+            (Math.random() * 1.2) + "s";
 
         heart.style.fontSize =
-            (14 + Math.random() * 14) + "px";
+            (13 + Math.random() * 12) + "px";
 
         rain.appendChild(heart);
 
         window.setTimeout(() => {
             heart.remove();
-        }, 5200);
+        }, 5000);
     }
 }
 
@@ -53,6 +52,15 @@ showSurprise.addEventListener("click", () => {
     letterPanel.classList.add("hidden");
 
     endingPanel.classList.remove("hidden");
+
+    // Memulai ulang animasi pelukan
+    const hugScene = endingPanel.querySelector(".hug-scene");
+
+    hugScene.style.animation = "none";
+
+    void hugScene.offsetWidth;
+
+    hugScene.style.animation = "";
 
     createHeartRain();
 
